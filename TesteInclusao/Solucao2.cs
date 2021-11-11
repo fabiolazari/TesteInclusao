@@ -29,41 +29,31 @@ namespace TesteInclusao
 					Tipo = "Celular"
 				}
 			};
-			/*
+			
+
 			using (OleDbConnection conexaodb = new OleDbConnection(conexaoAccess))
 			{
-				conexaodb.Open();
-				pessoa.Endereco.Id = Cadastro2.CadastrarEndereco(pessoa.Endereco, conexaodb);
-				//if
+				try
+				{
+					conexaodb.Open();
 
-				pessoa.Telefone.Id = Cadastro2.CadastrarTelefone(pessoa.Telefone, conexaodb);
-				//if
+					pessoa.Endereco.Id = Cadastro2.CadastrarEndereco(pessoa.Endereco, conexaodb);
+					//if
 
-				bool retorno = Cadastro2.CadastrarPessoa(pessoa, conexaodb);
-			}
-			*/
-			OleDbConnection conexaodb = new OleDbConnection(conexaoAccess);
-			
-			try
-			{
-				conexaodb.Open();
+					pessoa.Telefone.Id = Cadastro2.CadastrarTelefone(pessoa.Telefone, conexaodb);
+					//if
 
-				pessoa.Endereco.Id = Cadastro2.CadastrarEndereco(pessoa.Endereco, conexaodb);
-				//if
-
-				pessoa.Telefone.Id = Cadastro2.CadastrarTelefone(pessoa.Telefone, conexaodb);
-				//if
-
-				pessoa.Id = Cadastro2.CadastrarPessoa(pessoa, conexaodb);
-			}
-			catch (Exception exception)
-			{
-				Console.WriteLine($"Erro: {exception.Message}");
-			}
-			finally
-			{
-				conexaodb.Close();
-				conexaodb.Dispose();
+					pessoa.Id = Cadastro2.CadastrarPessoa(pessoa, conexaodb);
+				}
+				catch (Exception exception)
+				{
+					Console.WriteLine($"Erro: {exception.Message}");
+				}
+				finally
+				{
+					conexaodb.Close();
+					conexaodb.Dispose();
+				}
 			}
 		}
 	}
