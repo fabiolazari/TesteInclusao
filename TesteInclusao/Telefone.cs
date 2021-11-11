@@ -8,5 +8,7 @@ namespace TesteInclusao
 		public long NumeroTelefone { get; set; }
 		public int Ddd { get; set; }
 		public string Tipo { get; set; }
+
+		public int IdPessoa { get; set; }
 	}
 }

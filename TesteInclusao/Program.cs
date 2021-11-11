@@ -12,7 +12,9 @@ namespace TesteInclusao
 		{
 			//Solucao1.Executa();
 
-			Solucao2.Executa();
+			//Solucao2.Executa();
+
+			Solucao3.Executa();
 
 			Console.ReadKey();
 		}

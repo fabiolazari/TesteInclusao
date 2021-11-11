@@ -45,12 +45,14 @@
   <ItemGroup>
     <Compile Include="Cadastro1.cs" />
     <Compile Include="Cadastro2.cs" />
+    <Compile Include="Cadastro3.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solucao1.cs" />
     <Compile Include="Solucao2.cs" />
+    <Compile Include="Solucao3.cs" />
     <Compile Include="Telefone.cs" />
   </ItemGroup>
   <ItemGroup>

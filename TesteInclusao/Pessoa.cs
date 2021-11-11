@@ -1,4 +1,5 @@
-﻿
+﻿using System.Collections.Generic;
+
 namespace TesteInclusao
 {
 	public class Pessoa
@@ -9,5 +10,7 @@ namespace TesteInclusao
 
 		public Endereco Endereco { get; set; }
 		public Telefone Telefone { get; set; }
+
+		public List<Telefone> Telefones { get; set; }
 	}
 }
